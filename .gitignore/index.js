@@ -237,4 +237,5 @@ bot.on("message", async function(message) {
             message.delete()
             member.guild.channels.find("name", "log").sendEmbed(embed);
             break;;
-
+  } 
+});
