@@ -201,41 +201,7 @@ bot.on("message", async function(message) {
             if (reason.length < 1) return message.reply("Tu as oublié la raison.");
             if (message.mentions.users.size < 1) return message.reply("Tu as oublié de préciser qui je dois warn..")
             
-            
-            message.channel.send(user.toString() + " a bien été warn.")
-
-            var embed = new Discord.RichEmbed()
-            .addField("Commande :", "WARN")
-            .addField("Utilisateur :", user.username)
-            .addField("Modérateur :", message.author.username)
-            .addField("Raison : ", reason)
-            .addField("Heure:", message.channel.createdAt)
-            .setColor("#01A9DB")
-            .setAuthor(message.author.username, message.author.avatarURL)
-            .setTimestamp()
-            member.guild.channels.find("name", "log").sendEmbed(embed);
-            
-            bot.channels.get('387078781866606593').sendMessage(":white_check_mark: Le joueur " + user.username + " à été warn pour: " + reason);
-            message.author.send("Vous avez été warn pour: **`" + reason + "** Si vous continuer, vous risquez de vous faire bannir.");
-            message.delete();
-            break;
-        case "purge":
-            if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.sendMessage("Tu ne peux exécuter cette commande.");
-            var messagecount = parseInt(args2.join(" "));
-            if(!messagecount) return message.channel.send("Tu dois mettre un certain nombre de messages.")
-            message.channel.fetchMessages({
-                limit: messagecount
-            }).then(messages => message.channel.bulkDelete(messagecount));
-                        message.delete()
-            var embed = new Discord.RichEmbed()
-            .addField("Commande :", "PURGE")
-            .addField("Modérateur :", message.author.username)
-            .addField("Message supprimé", messagecount)
-            .addField("Heure:", message.channel.createdAt)
-            .setColor("#01A9DB")
-            .setFooter("Ouf ! Sa as fait un bon ménage dans le channel ! ^^")
-            message.delete()
-            member.guild.channels.find("name", "log").sendEmbed(embed);
-            break;;
-  } 
-});
+             ;;
+   
+}
+Le
