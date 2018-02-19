@@ -32,5 +32,5 @@ bot.on("message", message => {
         message.reply(" C'est Hihax");})
 bot.on("guildMemberAdd", function(member) {
     member.guild.channels.find("name", "join-leave").sendMessage(member.toString() + " Bienvenue sur le discord d'**AustelClient** ! :white_check_mark: -  N'hésite pas à faire la commande A!help :D");
-    member.addRole(member.guild.roles.find("name", "| • « MEMBRE »  • |"));
+    member.addRole(member.guild.roles.find("name", "MUET"));
 });
