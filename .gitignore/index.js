@@ -30,7 +30,7 @@ bot.on("message", message => {
 bot.on("message", message => {
     if (message.content === "Qui est ton créateur ?")
         message.reply(" C'est Hihax");})
-bot.on("guildMemberAdd", function(member) {
-    member.guild.channels.find("name", "join-leave").sendMessage(member.toString() + " Bienvenue sur le discord d'**AustelClient** ! :white_check_mark: -  N'hésite pas à faire la commande A!help :D");
-    member.addRole(member.guild.roles.find("name", "MUET"));
+bot.on('guildMemberAdd', member => {
+    let role = member.guild.roles.find("name", "Minozien");
+    member.addRole(role)
 });
